@@ -33,8 +33,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    api project(path: ':Provider')
+    // Module Dependency
+    implementation project(path: ':Provider')
 
+    // 是否切換Library
     if (isUserModule.toBoolean()) {
         api project(path: ':UserCenter')
     }
